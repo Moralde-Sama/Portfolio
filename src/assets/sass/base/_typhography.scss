@@ -12,7 +12,7 @@ a:link, a:visited {
 
 .header-container {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);    
     padding: 2rem;
@@ -47,5 +47,45 @@ a:link, a:visited {
         animation: bottomTotop 1.2s;
         animation-delay: 1.5s;
         animation-fill-mode: backwards;
+    }
+}
+
+.about-me {
+    color: $color-white;
+    font-size: $font-size;
+    display: inline-block;
+    padding: 0 20%;
+    backface-visibility: hidden;
+
+    &-name {
+        font-size: calc(#{$font-size} + 1rem);
+        letter-spacing: .4rem;
+        margin-bottom: .3rem;
+        text-transform: uppercase;
+
+        animation: leftToRight 1s;
+    }
+
+    &-role {
+        font-size: calc(#{$font-size} + 1rem);
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+
+        animation: rightToLeft 1s;
+    }
+
+    &-description {
+        line-height: 3.4rem;
+        letter-spacing: .2rem;
+        word-spacing: .5rem;
+        text-align: justify;
+
+        animation: bottomTotop 1s;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-me {
+        padding: 4rem;
     }
 }

@@ -1,9 +1,14 @@
 nav {
-    padding: 1rem;
+    position: fixed;
+    z-index: 3;
+    padding: 4rem;
+    background-color: $color-black;
+    box-shadow: 0 1.5rem 2rem rgba($color-black, .5);
 
     .navigation-list {
         list-style: none;
         margin-right: 9.1rem;
+        backface-visibility: hidden;
 
         .navigation-item {
             display: inline-block;
@@ -11,7 +16,7 @@ nav {
             animation: rightToLeft 1s;
             animation-delay: 2.3s;
             animation-fill-mode: backwards;
-            border: .2rem solid $color-black;
+            border: .2rem solid transparent;
             border-radius: 1rem;
             transition: all .5s;
 
@@ -20,14 +25,19 @@ nav {
             }
 
             &:hover {
-                border: .2rem solid $color-white;
-                box-shadow: .1rem .1rem 2rem rgba($color-white, .5);
-                transform: translateY(-.2rem);
+                @include navItem;
             }
 
             &:active{
                 box-shadow: 0 0 0 rgba($color-white, .5);
                 transform: translateY(0);
+            }
+
+            &.selected {
+                @include navItem;
+                &:hover {
+                    @include navItem;
+                }
             }
 
             .item {
@@ -38,5 +48,11 @@ nav {
                 letter-spacing: $letter-spacing;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        padding: 2rem 4rem;
     }
 }

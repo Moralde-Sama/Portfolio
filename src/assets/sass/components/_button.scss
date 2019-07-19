@@ -1,0 +1,27 @@
+.btn {
+    padding: 2rem 2.5rem;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    border: .2rem solid $color-white;
+    background-color: transparent;
+    font-size: $font-size;
+    color: $color-white;
+    cursor: pointer;
+    transition: all .5s;
+    display: inline-block;
+
+    &:hover {
+        @include navItem;
+    }
+
+    &:active{
+        box-shadow: 0 0 0 rgba($color-white, .5);
+        transform: translateY(0);
+    }
+
+    &.landing-page {
+        animation: bottomTotop 1s;
+        animation-delay: 3s;
+        animation-fill-mode: backwards;
+    }
+}

@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
 @import "./assets/sass/abstracts/variables";
+@import "./assets/sass/abstracts/mixins";
 
 @import "./assets/sass/base/animations";
 @import "./assets/sass/base/base";
 @import "./assets/sass/base/typhography";
+@import "./assets/sass/base/utilities";
 
+@import "./assets//sass/components/button";
 @import "./assets//sass/components/nav";
 
+@import "./assets/sass/layout/grid";
+
 @import "./assets/sass/pages/landingpage";
+@import "./assets/sass/pages/workexperience";
+@import "./assets/sass/pages/aboutme";
