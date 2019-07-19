@@ -1,26 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
-html, body {
-    scroll-behavior: smooth;
-    height: 100%;
-    margin: 0px;
-}
-label {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-p {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-}
-.animate-circle {
-    position: fixed;
-    background-color: #333333;
-    clip-path: circle(0% at 50% 50%);
-    height: 100%;
-    width: 100%;
-    transition: clip-path .5s ease-in-out;
-}
-.animate-circle.active {
-    clip-path: circle(100% at 50% 50%);
-}
+
+@import "./assets/sass/abstracts/variables";
+
+@import "./assets/sass/base/animations";
+@import "./assets/sass/base/base";
+@import "./assets/sass/base/typhography";
+
+@import "./assets//sass/components/nav";
+
+@import "./assets/sass/pages/landingpage";

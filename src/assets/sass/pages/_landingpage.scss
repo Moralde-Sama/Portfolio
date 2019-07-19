@@ -1,0 +1,30 @@
+.github-container {
+    position: fixed;
+    top: -17.5rem;
+    right: -17.5rem;
+    z-index: 3;
+    width: 35rem;
+    height: 35rem;
+    background-color: $color-white;
+    clip-path: circle(50% at 50% 50%);
+    animation: github-container-trans .5s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+
+    .github-link {
+        img {
+            width: 8rem;
+            margin-top: 54%;
+            margin-left: 24%;
+            animation: fadeOut 1s;
+            animation-delay: 2.2s;
+            animation-fill-mode: backwards;
+        }
+    }
+}
+.landing-page-container {
+    height: 100vh;
+    background-color: $color-black;
+    padding: 3rem;
+    position: relative;
+}

@@ -1,0 +1,51 @@
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto', sans-serif;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:link, a:visited {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.header-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+
+    .header-main {
+        font-size: 4rem;
+        color: $color-white;
+        margin-bottom: .6rem;
+        word-spacing: $word-spacing;
+        letter-spacing: $letter-spacing;
+        display: block;
+        animation: bottomTotop 1.3s;
+        animation-delay: .5s;
+        animation-fill-mode: backwards;
+        text-transform: uppercase;
+        cursor: default;
+    }
+    
+    .header-sub {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $color-white;
+        font-weight: 700;
+        word-spacing: $word-spacing;
+        display: block;
+        text-transform: uppercase;
+        cursor: default;
+
+        animation: bottomTotop 1.2s;
+        animation-delay: 1.5s;
+        animation-fill-mode: backwards;
+    }
+}
