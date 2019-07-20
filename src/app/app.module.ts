@@ -8,6 +8,8 @@ import { WorkExperienceComponent } from './work-experience/work-experience.compo
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ProjectCardComponent } from './projects/project-card/project-card.component';
+import { AnimationDelayDirective } from './directive/animation-delay.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
     WorkExperienceComponent,
     NavigationBarComponent,
     ProjectsComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ProjectCardComponent,
+    AnimationDelayDirective
   ],
   imports: [
     BrowserModule,
