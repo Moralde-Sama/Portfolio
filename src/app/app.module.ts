@@ -10,6 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
 import { AnimationDelayDirective } from './directive/animation-delay.directive';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AnimationDelayDirective } from './directive/animation-delay.directive';
     ProjectsComponent,
     AboutMeComponent,
     ProjectCardComponent,
-    AnimationDelayDirective
+    AnimationDelayDirective,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,

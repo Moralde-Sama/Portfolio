@@ -11,7 +11,7 @@ export class ProjectCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.index = this.Index;
+    this.index = this.Index * .5;
   }
 
 }

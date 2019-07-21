@@ -48,3 +48,12 @@
         clip-path: circle(50% at 50% 50%);
     }
 }
+
+@keyframes scaleHR {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
