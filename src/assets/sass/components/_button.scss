@@ -24,4 +24,13 @@
         animation-delay: 3s;
         animation-fill-mode: backwards;
     }
+
+    &.project {
+        padding: 1rem;
+        border-radius: 1rem;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
 }

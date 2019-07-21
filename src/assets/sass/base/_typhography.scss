@@ -1,10 +1,13 @@
 h1, h2, h3, h4, h5 {
     font-family: 'Roboto', sans-serif;
     color: $color-white;
+    cursor: default;
 }
+
 p, img  {
     font-family: 'Montserrat', sans-serif;
     color: $color-white;
+    cursor: default;
 }
 
 
@@ -92,6 +95,7 @@ a:link, a:visited {
 .project-description {
     margin-top: 1rem;
     font-size: $font-size;
+    line-height: 3.5rem;
 }
 .project-role {
     margin-top: 1rem;

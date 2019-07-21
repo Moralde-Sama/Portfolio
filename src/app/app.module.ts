@@ -11,6 +11,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
 import { AnimationDelayDirective } from './directive/animation-delay.directive';
 import { ResumeComponent } from './resume/resume.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ResumeComponent } from './resume/resume.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

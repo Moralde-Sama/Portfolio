@@ -1,12 +1,13 @@
 <div class="margin-top-25vh">
   <div class="page-header">
     <h1 class="page-title">
-      My Projects
+      Projects
       <hr>
     </h1>
   </div>
   <app-project-card 
-    *ngFor="let item of items; let i = index"
+    *ngFor="let project of projects; let i = index"
     [Index]="i"
+    [Project]="project"
   ></app-project-card>
 </div>

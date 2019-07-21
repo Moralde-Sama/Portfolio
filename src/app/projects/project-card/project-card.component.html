@@ -1,20 +1,30 @@
 <div class="project-card" appAnimationDelay [Index]="index">
   <div class="project-owner-profile">
-    <img src="https://avatars3.githubusercontent.com/u/41711381?v=4" alt="Github repository owner">
+    <img [src]="project.owner_profile" alt="Github repository owner">
   </div>
   <div class="project-content">
     <h2 class="project-title">
-      Test Test
+      {{project.title}}
     </h2>
     <p class="project-description">
-      [Developing] Mobile Version of Test Test using their API
+      {{project.description}}
     </p>
     <p class="project-role">
-      Role: Full Stack Web Developer
+      Role: {{project.role}}
     </p>
     <ul class="technologies">
-      <li>Angular Framework</li>
-      <li>Ionic Framework</li>
-      <li>Cordova</li>
+      <li *ngFor="let technology of project.technologies">{{technology}}</li>
     </ul>
+    <div class="project-repo">
+      <div class="project-btns">
+          <a href="#" class="btn project">Website</a>
+        <a href="{{project.owner_link}}/{{project.title}}" 
+          class="btn project" 
+          aria-label="Github Repository" 
+          target="_blank" 
+          rel="noopener">
+          Repository
+        </a>
+      </div>
+    </div>
 </div>
