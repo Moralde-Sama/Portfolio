@@ -17,14 +17,23 @@
     </ul>
     <div class="project-repo">
       <div class="project-btns">
-          <a href="#" class="btn project">Website</a>
-        <a href="{{project.owner_link}}/{{project.title}}" 
+        <a *ngIf="project.website" href="{{project.website}}"
+            class="btn project"
+            class="btn project" 
+            aria-label="Website" 
+            target="_blank" 
+            rel="noopener">Website</a>
+        <a href="{{project.owner_link}}"
+            class="btn project"
+            class="btn project" 
+            aria-label="Repository Owner" 
+            target="_blank" 
+            rel="noopener">Owner</a>
+        <a href="{{project.github_repository}}" 
           class="btn project" 
           aria-label="Github Repository" 
           target="_blank" 
-          rel="noopener">
-          Repository
-        </a>
+          rel="noopener">Repository</a>
       </div>
     </div>
 </div>
