@@ -21,6 +21,7 @@ nav {
             border-radius: 1rem;
             transition: all .5s;
             margin-bottom: .5rem;
+            backface-visibility: hidden;
 
             &:not(:last-child) {
                 margin-right: 2rem;

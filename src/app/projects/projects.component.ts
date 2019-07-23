@@ -13,6 +13,10 @@ export class ProjectsComponent implements OnInit {
   constructor(private project_service: ProjectService) { }
 
   ngOnInit() {
+    
+  }
+
+  ngAfterViewInit() {
     this.project_service.getProjects().then((data) => {
       data.forEach((value) => {
         const project: Project = new Project();
@@ -20,7 +24,6 @@ export class ProjectsComponent implements OnInit {
           project[key] = value[key];
         });
         this.projects[this.projects.length] = project;
-        console.log(this.projects);
       });
     });
   }

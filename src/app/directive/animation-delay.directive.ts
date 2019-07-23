@@ -9,7 +9,6 @@ export class AnimationDelayDirective {
   }
 
   ngOnInit() {
-    console.log(this.Index)
     this.renderer.setStyle(this.el.nativeElement, 'animation-delay', `${this.Index}s`);
   }
 }

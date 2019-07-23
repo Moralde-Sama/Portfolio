@@ -4,15 +4,19 @@ h1, h2, h3, h4, h5 {
     cursor: default;
 }
 
-p, img  {
-    font-family: 'Montserrat', sans-serif;
+p, img {
+    @include font-secondary;
     color: $color-white;
     cursor: default;
 }
 
+button {
+    color: $color-white;
+    @include font-secondary;
+}
 
 a:link, a:visited {
-    font-family: 'Montserrat', sans-serif;
+    @include font-secondary;
     text-decoration: none;
     outline: none !important;
     -webkit-tap-highlight-color: transparent;

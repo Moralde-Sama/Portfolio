@@ -1,3 +1,11 @@
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
 .btn {
     padding: 2rem 2.5rem;
     text-transform: uppercase;
