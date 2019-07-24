@@ -12,6 +12,7 @@ import { ProjectCardComponent } from './projects/project-card/project-card.compo
 import { AnimationDelayDirective } from './directive/animation-delay.directive';
 import { ResumeComponent } from './resume/resume.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WorkExperienceItemComponent } from './work-experience/work-experience-item/work-experience-item.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutMeComponent,
     ProjectCardComponent,
     AnimationDelayDirective,
-    ResumeComponent
+    ResumeComponent,
+    WorkExperienceItemComponent
   ],
   imports: [
     BrowserModule,

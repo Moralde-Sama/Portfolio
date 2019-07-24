@@ -14,3 +14,9 @@
 @mixin font-secondary {
     font-family: 'Montserrat', sans-serif;
 }
+
+@mixin text-default {
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    word-spacing: $word-spacing;
+}

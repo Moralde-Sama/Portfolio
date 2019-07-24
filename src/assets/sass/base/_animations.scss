@@ -20,7 +20,7 @@
     }
 }
 
-@keyframes fadeOut {
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
@@ -33,6 +33,16 @@
     from {
         opacity: 0;
         transform: translateY(3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes topToBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
     }
     to {
         opacity: 1;
@@ -55,5 +65,15 @@
     }
     to {
         transform: scale(1.1);
+    }
+}
+
+@keyframes timelineAnimate {
+    
+    0% {
+        height: 0;
+    }
+    to {
+        height: 90%;
     }
 }

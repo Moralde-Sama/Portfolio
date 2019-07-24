@@ -1,0 +1,110 @@
+.timeline {
+    position: relative;
+    margin-left: 20%;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-white;
+        box-shadow: .1rem .1rem 1rem $color-white;
+        width: .4rem;
+        height: 90%;
+        margin-top: 1rem;
+
+        animation: timelineAnimate 2s;
+        animation-fill-mode: backwards;
+    }
+
+    &-item {
+
+        &:not(:last-child) {
+            margin-bottom: 2.5em;
+        }
+
+        .timeline-content {
+            position: relative;
+            margin: 2rem;
+            border: .2rem solid $color-white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            width: 70%;
+
+            animation: topToBottom 1.5s;
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+
+            &--position {
+                @include text-default;
+                font-weight: normal;
+                margin-bottom: 1rem;
+            }
+    
+            &--company {
+                @include text-default;
+                font-weight: normal;
+                margin-bottom: 1rem;
+            }
+            &--experience {
+                @include text-default;
+                font-weight: normal;
+                margin-bottom: 1rem;
+            }
+    
+            &--description {
+                @include text-default;
+            }
+        }
+
+        &--date {
+            position: relative;
+            display: inline-block;
+            border: .2rem solid $color-white;
+            border-radius: 1rem;
+            padding: 1rem;
+            font-size: $font-size;
+            box-shadow: .1rem .1rem 1rem $color-white;
+            margin-left: 4rem;
+            @include text-default;
+            
+            animation: topToBottom 1.5s;
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: .7rem;
+                right: 100%;
+                width: 0;
+                height: 0;
+                border: 1.5rem solid transparent;
+                border-right-color: $color-white;
+                
+            }
+
+            .circle {
+                position: absolute;
+                margin-top: -.3rem;
+                margin-left: -6.5rem;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .timeline {
+        margin-left: 0;
+
+        .timeline-item {
+            .timeline-content {
+                width: 100%;
+            }
+        }
+    }
+}

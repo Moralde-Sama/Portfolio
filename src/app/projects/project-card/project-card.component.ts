@@ -8,14 +8,12 @@ import { Project } from '../project.class';
 })
 export class ProjectCardComponent implements OnInit {
   @Input() Index: number;
-  @Input() Project: Project;
+  @Input() project: Project;
   public index: number;
-  public project: Project;
   constructor() { }
 
   ngOnInit() {
     this.index = this.Index * .5;
-    this.project = this.Project;
   }
 
 }
