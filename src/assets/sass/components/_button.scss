@@ -6,6 +6,10 @@ button {
     -webkit-tap-highlight-color: transparent;
 }
 
+.resume-btns {
+    text-align: center;
+}
+
 .btn {
     padding: 2rem 2.5rem;
     text-transform: uppercase;
@@ -40,5 +44,34 @@ button {
         &:not(:last-child) {
             margin-right: 2rem;
         }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+
+    &.animate {
+        animation: rightToLeft 1s;
+
+        &.delay-1 {
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+        }
+
+        &.delay-2 {
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        &.delay-3 {
+            animation-delay: 3s;
+            animation-fill-mode: backwards;
+        }
+    }
+}
+
+@media only screen and (max-width: 40rem) {
+    .btn {
+        width: 100%;
     }
 }
