@@ -46,10 +46,6 @@ button {
         }
     }
 
-    &:not(:last-child) {
-        margin-bottom: 1.5rem;
-    }
-
     &.animate {
         animation: rightToLeft 1s;
 
@@ -66,6 +62,10 @@ button {
         &.delay-3 {
             animation-delay: 3s;
             animation-fill-mode: backwards;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
         }
     }
 }
