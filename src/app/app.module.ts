@@ -25,7 +25,7 @@ import { WorkExperienceItemComponent } from './work-experience/work-experience-i
     ProjectCardComponent,
     AnimationDelayDirective,
     ResumeComponent,
-    WorkExperienceItemComponent
+    WorkExperienceItemComponent,
   ],
   imports: [
     BrowserModule,

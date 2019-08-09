@@ -14,9 +14,10 @@
             font-weight: bold;
             text-transform: uppercase;
             text-shadow: 0.1rem 0.1rem 0.3rem white;
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 5rem;
             animation: rightToLeft 1s;
+            letter-spacing: .2rem;
 
             &::after {
                 content: "";
@@ -39,9 +40,10 @@
             animation: rightToLeft 1s;
             animation-delay: 2s;
             animation-fill-mode: backwards;
+            margin-bottom: 5rem;
 
             .skill-item--img {
-                width: 13rem;
+                width: 12rem;
                 border-radius: 1rem;
                 margin-bottom: 1rem;
             }
@@ -49,9 +51,7 @@
             .skill-item--name {
                 text-align: center;
                 font-size: 2.3rem;
-            }
-            &:not(:last-child) {
-                margin-bottom: 5rem;
+                letter-spacing: .2rem;
             }
         }
 
