@@ -13,12 +13,8 @@ export class WorkExperienceComponent implements OnInit {
   constructor(private workService: WorkexperienceService) { }
 
   ngOnInit(): void {
-  }
-
-  ngAfterViewInit(): void {
     this.workService.getWorkExperience().then((result) => {
       this.experiences = result;
     });
   }
-
 }

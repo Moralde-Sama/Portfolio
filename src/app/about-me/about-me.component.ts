@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
+  }
+
+  showEmail(): void {
+    const gmail_elem = document.getElementsByClassName('gmail')[0];
+    if(gmail_elem.className.includes('show'))
+      this.renderer.removeClass(gmail_elem, 'show');
+    else
+      this.renderer.addClass(gmail_elem, 'show');
   }
 
 }

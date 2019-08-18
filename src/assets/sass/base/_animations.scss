@@ -29,6 +29,26 @@
     }
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOutLinkedIn {
+    from {
+        margin-left: 9rem;
+        opacity: 1;
+    }
+    to {
+        margin-left: 9rem;
+        opacity: 0;
+    }
+}
+
 @keyframes bottomTotop {
     from {
         opacity: 0;
