@@ -4,10 +4,10 @@
     transform: translateY(-.2rem);
 
     &:not(.item) {
-        text-shadow: .1rem .1rem 1rem $color-white;
+        text-shadow: .1rem .1rem .5rem $color-white;
     }
     &:not(a) .item {
-        text-shadow: .1rem .1rem 1rem $color-white;
+        text-shadow: .1rem .1rem .5rem $color-white;
     }
 }
 

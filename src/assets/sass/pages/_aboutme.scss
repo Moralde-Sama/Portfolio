@@ -37,7 +37,7 @@
 
         .skill-item {
             display: block;
-            animation: rightToLeft 1s;
+            animation: fadeIn 1s;
             animation-delay: 2s;
             animation-fill-mode: backwards;
             margin-bottom: 5rem;

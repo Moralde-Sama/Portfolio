@@ -1,17 +1,37 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { AboutMeComponent } from './about-me/about-me.component';
 import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
-  { path: 'workexperience', component: WorkExperienceComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'resume', component: ResumeComponent},
-  { path: 'aboutme', component: AboutMeComponent }
+  {
+    path: 'workexperience',
+    loadChildren: () =>
+      import('./work-experience/work-experience.module').then(
+        m => m.WorkExperienceModule
+      )
+  },
+  {
+    path: 'projects',
+    loadChildren: () =>
+      import('./projects/projects.module').then(
+        m => m.ProjectsModule
+      )
+  },
+  {
+    path: 'resume',
+    loadChildren: () =>
+      import('./resume/resume.module').then(
+        m => m.ResumeModule
+      )
+  },
+  {
+    path: 'aboutme',
+    loadChildren: () =>
+      import('./about-me/about-me.module').then(m => m.AboutMeModule)
+  }
 ];
 
 @NgModule({
