@@ -1,9 +1,12 @@
 .page-container {
-    position: fixed;
     min-height: 100vh;
     background-color: $color-black;
     padding: 3rem;
     width: 100%;
+
+    &.fixed {
+        position: fixed;
+    }
 
     .component-container {
         padding: 0;
