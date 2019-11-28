@@ -6,19 +6,19 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent },
   {
     path: 'workexperience',
-    loadChildren: './work-experience/work-experience.module#WorkExperienceModule'
+    loadChildren: () => import('./work-experience/work-experience.module').then(m => m.WorkExperienceModule)
   },
   {
     path: 'projects',
-    loadChildren: './projects/projects.module#ProjectsModule'
+    loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
   },
   {
     path: 'resume',
-    loadChildren: './resume/resume.module#ResumeModule'
+    loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule)
   },
   {
     path: 'aboutme',
-    loadChildren: './about-me/about-me.module#AboutMeModule'
+    loadChildren: () => import('./about-me/about-me.module').then(m => m.AboutMeModule)
   }
 ];
 

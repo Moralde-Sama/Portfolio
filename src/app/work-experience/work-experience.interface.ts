@@ -1,4 +1,4 @@
-export class WorkExperience {
+export interface WorkExperience {
     start: string;
     end: string;
     company: string;
