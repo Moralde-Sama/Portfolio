@@ -2,7 +2,7 @@
 ::-webkit-scrollbar {
     width: 1.5rem;
     height: 1.5rem;
-    background-color: $color-black;
+    background: lighten($color-black, .5); 
   }
   
   /* Track */
@@ -19,5 +19,5 @@
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: lighten($color-black, .5); 
+    background: grey; 
   }
