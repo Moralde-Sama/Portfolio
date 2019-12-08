@@ -17,6 +17,7 @@ export class WorkExperienceComponent implements OnInit {
     // this.workService.getWorkExperience().then((result) => {
     //   this.experiences = result;
     // });
+    window.scrollTo(0, 0);
     this.activatedRoute.data.subscribe((resolveData: { experiences: WorkExperience[]}) => {
       this.experiences = resolveData.experiences;
     });

@@ -10,6 +10,7 @@ export class AboutMeComponent implements OnInit {
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
   }
 
   showEmail(): void {

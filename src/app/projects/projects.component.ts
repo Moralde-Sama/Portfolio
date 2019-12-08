@@ -23,6 +23,7 @@ export class ProjectsComponent implements OnInit {
     //     this.projects[this.projects.length] = project;
     //   });
     // });
+    window.scrollTo(0, 0);
     this.actived_route.data.subscribe((resolved_data: any) => {
       resolved_data['projects'].forEach((value) => {
         const project = new Project();
