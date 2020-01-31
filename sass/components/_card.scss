@@ -1,0 +1,18 @@
+@import '../abstracts/variables';
+
+@mixin Card($border-radius) {
+    border-radius: $border-radius;
+    background-color: $primaryColor;
+    box-shadow: 
+        .9rem .9rem 10px rgba(0,0,0, .4),
+        -.2rem -.2rem 10px rgba(255,255,255, .2);
+    padding: 1rem 2.5rem;
+    margin: .5rem;
+}
+
+.card_rectangle {
+    @include Card(3rem);
+}
+.card_circle {
+    @include Card(50%);
+}
