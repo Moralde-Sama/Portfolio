@@ -7,7 +7,6 @@ export interface IHeadingProps {
 
 export default class Heading extends React.PureComponent<IHeadingProps> {
   public render() {
-    console.log('heading');
     return (
       <div className={style.headingContainer}>
         <Card shape={CardShapes.rectangle}>
