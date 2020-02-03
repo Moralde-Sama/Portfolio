@@ -1,17 +1,30 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes, Keyframes } from 'styled-components';
+
+const Active = keyframes`
+    from {
+        box-shadow: 0 0 0 rgba(0,0,0, .4),
+        0 0 0 rgba(255,255,255, .2);
+    }
+    to {
+        box-shadow: .9rem .9rem 10px rgba(0,0,0, .4),
+        -.2rem -.2rem 10px rgba(255,255,255, .2);
+    }
+`;
 
 interface ICardContainerProps {
   circle: boolean;
+  style?: string;
 }
 
 const CardContainer = styled.div<ICardContainerProps>`
-  border-radius: ${props => props.circle ? '50%' : '3rem'};
+  border-radius: ${props => props.circle ? '150rem' : '3rem'};
   background-color: ${props => props.theme.primary};
   box-shadow: .9rem .9rem 10px rgba(0,0,0, .4),
       -.2rem -.2rem 10px rgba(255,255,255, .2);
-  padding: ${props => props.circle ? '2rem' : '1rem 2.5rem'};
+  padding: ${props => props.circle ? '1.8rem 2rem' : '1rem 2.5rem'};
   margin: .5rem;
+  ${props => props.style}
 `;
 
 export enum CardShapes {
@@ -20,7 +33,8 @@ export enum CardShapes {
 }
 
 export interface ICardProps {
-  shape: CardShapes
+  shape: CardShapes;
+  style?: string;
 }
 
 export default class Card extends React.PureComponent<ICardProps> {
@@ -40,7 +54,7 @@ export default class Card extends React.PureComponent<ICardProps> {
     }
 
     return (
-      <CardContainer circle={isCircle}>
+      <CardContainer circle={isCircle} style={this.props.style}>
         {this.props.children}
       </CardContainer>
     );

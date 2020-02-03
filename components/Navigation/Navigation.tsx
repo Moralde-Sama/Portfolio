@@ -12,6 +12,7 @@ export enum NavigationItems {
 
 export interface INavigationProps {
     selectedItem: NavigationItems;
+    onClickNav: (title: string) => void;
 }
 
 const NavTitles: string[] = [
@@ -38,21 +39,16 @@ export default class Navigation extends React.Component<INavigationProps> {
     }
 
     public render() {
-        const RenderNavigationItem = () => {
-            let navigationItem: any = [];
-            for (let index in NavTitles) {
-                navigationItem.push(
-                    <NavigationItem 
-                        key={NavTitles[index]} 
-                        title={NavTitles[index]} 
-                        selected={this.isNavItemSelected(NavTitles[index])} />
-                );
-            }
-            return navigationItem;
-        }
+        const RenderNavigationItem = NavTitles.map((title => (
+            <NavigationItem 
+                    key={title} 
+                    title={title} 
+                    selected={this.isNavItemSelected(title)}
+                    onClick={this.props.onClickNav} />
+            )));
         return (
         <NavigationList>
-            <RenderNavigationItem />
+            {RenderNavigationItem}
         </NavigationList>
         );
     }
