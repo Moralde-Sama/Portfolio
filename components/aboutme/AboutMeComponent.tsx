@@ -1,37 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Grid from '@material-ui/core/Grid';
 import Card, { CardShapes } from '../Card';
+import { OwnerInfo } from '../../pages/api/owner';
 
 const AboutMeWrapper = styled.div`
-  width: 100%;
+  width: 99%;
   height: 78vh;
-`;
-
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-interface IColumn {
-  centerContent?: boolean;
-  padding?: string;
-}
-
-const Column6 = styled.div<IColumn>`
-  width: 50%;
-  height: 100%;
-  padding: ${props => props.padding ?? ''};
-  display: ${props => props.centerContent ? 'flex' : 'block'};
-  justify-content: ${props => props.centerContent ? 'center' : ''};
-  align-contents: ${props => props.centerContent ? 'center' : ''};
-`;
-
-const Column12 = styled.div<IColumn>`
-  width: 100%;
-  height: 100%;
-  display: ${props => props.centerContent ? 'flex' : 'block'};
-  justify-content: ${props => props.centerContent ? 'center' : ''};
-  align-contents: ${props => props.centerContent ? 'center' : ''};
+  margin-top: 12rem;
 `;
 
 const Title = styled.h1`
@@ -40,6 +16,7 @@ const Title = styled.h1`
 `;
 
 export interface IAboutMeProps {
+  ownerInfo: OwnerInfo;
 }
 
 export interface IAboutMeState {
@@ -52,26 +29,32 @@ export default class AboutMe extends React.Component<IAboutMeProps, IAboutMeStat
     }
   }
 
+  componentDidMount() {
+    console.log(this.props.ownerInfo);
+  }
+
   public render() {
     return (
       <AboutMeWrapper>
-        <Row style={{marginTop: '11rem'}}>
-          <Column12 centerContent={true}>
+        <Grid container spacing={1} style={{marginBottom: '4rem'}}>
+          <Grid container item xs={12} spacing={3} justify='center'>
             <Card shape={CardShapes.rectangle}>
               <Title>About Me</Title>
             </Card>
-          </Column12>
-        </Row>
-        <Row style={{height: '100%'}}>
-          <Column6 padding={`2rem;`}>
-            <Card shape={CardShapes.rectangle}>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1}>
+          <Grid container item xs={6} spacing={3}>
+            <Card shape={CardShapes.rectangle} style="padding: 2rem; margin: 2rem;">
+
+            </Card>
+          </Grid>
+          <Grid container item xs={6} spacing={3}>
+            <Card shape={CardShapes.rectangle} style="padding: 2rem; margin: 2rem;">
               
             </Card>
-          </Column6>
-          <Column6 padding={`2rem;`}>
-          
-          </Column6>
-        </Row>
+          </Grid>
+        </Grid>
       </AboutMeWrapper>
     );
   }

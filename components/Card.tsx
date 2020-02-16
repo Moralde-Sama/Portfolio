@@ -14,7 +14,7 @@ const Active = keyframes`
 
 interface ICardContainerProps {
   circle: boolean;
-  style?: string;
+  styles?: string;
 }
 
 const CardContainer = styled.div<ICardContainerProps>`
@@ -24,7 +24,7 @@ const CardContainer = styled.div<ICardContainerProps>`
       -.2rem -.2rem 10px rgba(255,255,255, .2);
   padding: ${props => props.circle ? '1.8rem 2rem' : '1rem 2.5rem'};
   margin: .5rem;
-  ${props => props.style}
+  ${props => props.styles}
 `;
 
 export enum CardShapes {
@@ -54,7 +54,7 @@ export default class Card extends React.PureComponent<ICardProps> {
     }
 
     return (
-      <CardContainer circle={isCircle} style={this.props.style}>
+      <CardContainer circle={isCircle} styles={this.props.style}>
         {this.props.children}
       </CardContainer>
     );
