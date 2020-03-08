@@ -10,17 +10,18 @@
         background-color: $color-white;
         box-shadow: .1rem .1rem 1rem $color-white;
         width: .4rem;
-        height: 90%;
+        height: 95%;
         margin-top: 1rem;
 
-        animation: timelineAnimate 2s;
+        animation: timelineAnimate 1.8s;
         animation-fill-mode: backwards;
     }
 
     &-item {
+        margin-top: 1.5rem;
 
         &:not(:last-child) {
-            margin-bottom: 2.5em;
+            margin-bottom: 1.5rem;
         }
 
         .timeline-content {
