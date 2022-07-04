@@ -29,7 +29,7 @@
             aria-label="Repository Owner" 
             target="_blank" 
             rel="noopener">Owner</a>
-        <a href="{{project.github_repository}}" 
+        <a *ngIf="project.github_repository" href="{{project.github_repository}}" 
           class="btn project" 
           aria-label="Github Repository" 
           target="_blank" 
