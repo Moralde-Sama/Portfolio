@@ -5,15 +5,12 @@ import { ResumeRoutingModule } from './resume-routing.module';
 import { ResumeComponent } from './resume.component';
 
 @NgModule({
-  declarations: [
-    ResumeComponent
-  ],
-  imports: [
-    CommonModule,
-    ResumeRoutingModule
-  ],
-  entryComponents: [
-    ResumeComponent
-  ]
+    declarations: [
+        ResumeComponent
+    ],
+    imports: [
+        CommonModule,
+        ResumeRoutingModule
+    ]
 })
 export class ResumeModule { }

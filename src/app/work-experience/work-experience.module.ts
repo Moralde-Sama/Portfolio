@@ -7,19 +7,16 @@ import { WorkExperienceComponent } from './work-experience.component';
 import { WorkexperienceService } from './workexperience.service';
 
 @NgModule({
-  declarations: [
-    WorkExperienceComponent,
-    WorkExperienceItemComponent
-  ],
-  imports: [
-    CommonModule,
-    WorkExperienceRoutingModule
-  ],
-  entryComponents: [
-    WorkExperienceComponent
-  ],
-  providers: [
-    WorkexperienceService
-  ]
+    declarations: [
+        WorkExperienceComponent,
+        WorkExperienceItemComponent
+    ],
+    imports: [
+        CommonModule,
+        WorkExperienceRoutingModule
+    ],
+    providers: [
+        WorkexperienceService
+    ]
 })
 export class WorkExperienceModule { }

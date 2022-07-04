@@ -7,17 +7,14 @@ import { MySkillsModule } from './my-skills/my-skills.module';
 import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
-  declarations: [
-    AboutMeComponent,
-    ContactsComponent
-  ],
-  imports: [
-    CommonModule,
-    AboutMeRoutingModule,
-    MySkillsModule
-  ],
-  entryComponents: [
-    AboutMeComponent
-  ]
+    declarations: [
+        AboutMeComponent,
+        ContactsComponent
+    ],
+    imports: [
+        CommonModule,
+        AboutMeRoutingModule,
+        MySkillsModule
+    ]
 })
 export class AboutMeModule { }

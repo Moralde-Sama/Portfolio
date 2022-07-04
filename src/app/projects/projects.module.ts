@@ -8,20 +8,17 @@ import { ProjectService } from './project.service';
 import { AnimationDelayDirective } from '../directive/animation-delay.directive';
 
 @NgModule({
-  declarations: [
-    ProjectsComponent,
-    ProjectCardComponent,
-    AnimationDelayDirective
-  ],
-  imports: [
-    CommonModule,
-    ProjectsRoutingModule
-  ],
-  entryComponents: [
-    ProjectsComponent
-  ],
-  providers: [
-    ProjectService
-  ]
+    declarations: [
+        ProjectsComponent,
+        ProjectCardComponent,
+        AnimationDelayDirective
+    ],
+    imports: [
+        CommonModule,
+        ProjectsRoutingModule
+    ],
+    providers: [
+        ProjectService
+    ]
 })
 export class ProjectsModule { }
